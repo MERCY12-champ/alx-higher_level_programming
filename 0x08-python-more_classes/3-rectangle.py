@@ -4,7 +4,7 @@ and public methods"""
 
 
 class Rectangle:
-    """A Rectangle Class with the private instance attributes width and height"""
+        """A Rectangle Class with the private instance attributes width and height"""
 
     def __init__(self, width=0, height=0):
         """
