@@ -1,16 +1,14 @@
 #!/usr/bin/python3
-'''Module for read_lines method.'''
+"""Defines a file-appending function."""
 
 
-def read_lines(filename="", nb_lines=0):
-    '''Method for reading lines from file.'''
-    with open(filename, "r", encoding="utf-8") as f:
-        if nb_lines <= 0:
-            print(f.read(), end="")
-            return
-
-        for line in f:
-            print(line, end="")
-            nb_lines -= 1
-            if nb_lines <= 0:
-                break
+def append_write(filename="", text=""):
+    """Appends a string to the end of a UTF8 text file.
+    Args:
+        filename (str): The name of the file to append to.
+        text (str): The string to append to the file.
+    Returns:
+        The number of characters appended.
+    """
+    with open(filename, "a", encoding="utf-8") as f:
+        return f.write(text)
