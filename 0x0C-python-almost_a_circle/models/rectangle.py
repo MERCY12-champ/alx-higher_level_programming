@@ -133,4 +133,4 @@ class Rectangle(Base):
         ncls = "_Rectangle__"
         for k, v in self.__dict__.items():
             dic.update({str(k[12:]): v}) if ncls in k else dic.update({k: v})
-        return 
+        return
